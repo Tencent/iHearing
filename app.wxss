@@ -1,0 +1,55 @@
+/**app.wxss**/
+
+page {
+  height: 100%;
+  width: 100%;
+  background: #BFE0DD;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  background: #BFE0DD;
+
+}
+
+
+.cell-next, .cell-previous {
+  padding: 0 13px;
+  position: relative;
+  font-size: 26rpx;
+}
+
+.cell-next::after {
+  content: " ";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-width: 2px 2px 0 0;
+  border-color: #c8c8cd;
+  border-style: solid;
+  -webkit-transform: matrix(.71, .71, -.71, .71, 0, 0);
+  transform: matrix(.71, .71, -.71, .71, 0, 0);
+  top: -2px;
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+}
+
+.cell-previous::before {
+  content: " ";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-width: 0 0 2px 2px;
+  border-color: #c8c8cd;
+  border-style: solid;
+  -webkit-transform: matrix(.71, .71, -.71, .71, 0, 0);
+  transform: matrix(.71, .71, -.71, .71, 0, 0);
+  top: -2px;
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+}

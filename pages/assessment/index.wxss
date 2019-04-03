@@ -1,0 +1,169 @@
+/**index.wxss**/
+
+.panel {
+    padding: 28rpx;
+}
+
+
+.assessment-info {
+    height: 655rpx;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.assessment-info.result {
+    height: 405rpx;
+}
+
+.assessment-info.result .assessment-item {
+    font-size: 46rpx;
+}
+
+.assessment-info.result .assessment-phonetic,
+.assessment-info.result .assessment-mean
+{
+    font-size: 30rpx;
+}
+
+.assessment-text {
+    max-width: 100%;
+    word-wrap:break-word;
+}
+
+.assessment-item {
+    font-size: 80rpx;
+    color: #086A64;
+    line-height: 80rpx;
+    /* padding-right: .4em; */
+}
+
+.assessment-item + .assessment-item {
+    padding-left: .4em;
+}
+
+.sentence-text {
+    font-size: 60rpx;
+}
+
+.assessment-phonetic {
+    position: relative;
+    font-size: 40rpx;
+    color: #086A64;
+    line-height: 48rpx;
+}
+
+
+.text-success {
+    color: #1aad19;
+}
+.text-error {
+    color: #ff4444;
+}
+.assessment-mean {
+    font-size: 30rpx;
+    color: #000000;
+    line-height: 48rpx;
+    opacity: 0.7;
+}
+
+.play-img {
+    margin-left: 20rpx;
+    width: 33rpx;
+    height: 30rpx;
+}
+
+.play-icon {
+  display: inline-flex;
+  position: relative;
+  padding: 0 8rpx;
+  bottom: -4rpx;
+}
+
+.result-wrap {
+    height: 250rpx;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.score {
+    font-size: 120rpx;
+    color: #666;
+}
+.score.excellent {
+    color: #FF6800;
+}
+
+.score.good {
+    color: #4C6AFC;
+}
+
+
+.opt-wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #666;
+}
+
+
+.speaking-wrap {
+    width: 190rpx;
+    height: 190rpx;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.speaking-img{
+    width: 190rpx;
+    height: 190rpx;
+}
+
+.cell-switch {
+    width: 86rpx;
+    height: 86rpx;
+    box-sizing:border-box;
+    opacity: 0.8;
+    background: #FFFFFF;
+    box-shadow: 0 0 18px 0 rgba(8,70,66,0.06);
+    border-radius: 50%;
+}
+
+
+.sentence-list {
+    margin-top: 100rpx;
+    margin-bottom: 50rpx;
+}
+
+.sent-mean-wrap {
+    margin-left: 88rpx;
+}
+
+.sentence-play-img {
+    margin-right: 35rpx;
+}
+
+.sentence-item {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    padding: 50rpx 99rpx;
+
+    opacity: 0.7;
+    font-size: 34rpx;
+    color: #000000;
+}
+
+/* reload */
+.cell-previous {
+    position: relative;
+    padding:37rpx;
+}
+.cell-next {
+    position: relative;
+    padding:32rpx;
+}
+/* --- */

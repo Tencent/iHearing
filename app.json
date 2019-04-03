@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/list/index",
+
+    "pages/assessment/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#BFE0DD",
+    "navigationBarTitleText": "智聆口语测评",
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#BFE0DD"
+  },
+  "plugins": {
+    "ihearing-eval": {
+      "version": "0.0.6",
+      "provider": "wx63d6102e26f0a3f8"
+    }
+  }
+}

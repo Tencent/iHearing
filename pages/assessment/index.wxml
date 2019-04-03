@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="panel">
+    <view class="assessment-info {{hasResult ? 'result' : ''}}">
+      <view class="assessment-text">
+        <block wx:if="{{mode == 'sentence'}}">
+          <text class="assessment-item sentence-text" wx:if="{{ !hasResult }}">{{assessmentItem.text}}</text>
+          <text wx:if="{{ hasResult }}">
+            <text wx:for="{{wordArr}}" wx:key="index" class="assessment-item text-{{item.type}}">{{item.word}}</text>
+          </text>
+        </block>
+        <text class="assessment-item" wx:if="{{mode == 'word'}}">{{assessmentItem.text}}</text>
+      </view>
+      <view class="assessment-phonetic" >
+
+
+        <block wx:if="{{mode == 'word'}}">
+          <text class="phonetic" wx:if="{{ !hasResult }}">/{{assessmentItem.phone_info}}/</text>
+          <text class="phonetic" wx:if="{{ hasResult }}">
+            <text>/</text>
+            <text wx:for="{{phoneticArr}}" wx:key="index" class="text-{{item.type}}">{{item.phone}}</text>
+            <text>/</text>
+          </text>
+        </block>
+
+        <text class="phonetic" wx:if="{{mode == 'sentence'}}"> {{assessmentItem.ch_mean}}</text>
+      </view>
+      <view class="assessment-mean">
+        <view wx:for="{{ assessmentItem.ch_mean }}" wx:key="text">
+          <text>{{item.word_pos}}</text>
+          <text>{{item.word_str}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="result-wrap" wx:if="{{hasResult}}">
+      <text class="score {{ overallResult.pron_accuracy > 90 ? 'excellent' : overallResult.pron_accuracy > 60 ? 'good' : '' }} ">{{overallResult.pron_accuracy}}</text>
+    </view>
+
+  </view>
+
+  <view class="opt-wrap">
+    <view>
+      <view class="cell-previous cell-switch" bindtap="previous"></view>
+    </view>
+    <view class="speaking-wrap" catchtouchstart="streamRecord" catchtouchend="endStreamRecord">
+      <image src="/images/speaking.png" class="speaking-img"></image>
+    </view>
+    <view>
+      <view class="cell-next cell-switch" bindtap="next"></view>
+    </view>
+  </view>
+
+  <view class="sentence-list">
+    <navigator class="sentence-item" wx:for="{{ assessmentItem.sent_ids }}" wx:key="text" url="/pages/assessment/index?mode=sentence&&index={{index}}">
+      <view>
+        <image src="/images/speaker.png" class="play-img sentence-play-img"  data-voice="{{item.voice_id}}" bindtap="playVoice"></image>
+        <text>{{item.text}}</text>
+      </view>
+      <view class="sent-mean-wrap">
+        <text>{{item.ch_mean}}</text>
+      </view>
+    </navigator>
+  </view>
+
+
+</view>

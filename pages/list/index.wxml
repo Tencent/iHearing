@@ -1,0 +1,21 @@
+<!--index.wxml-->
+
+<view class="container">
+
+  <view class="title">
+    <view class="grade-text">{{grade.text}}</view>
+    <view class="unit-text">Unit {{unit}}</view>
+  </view>
+
+
+  <view class="item-list">
+
+    <navigator class="panel" wx:for="{{ itemList }}" wx:key="index" url="/pages/assessment/index?mode=word&&index={{index}}" >
+      <list-panel content="{{item.content}}" score="{{item.score}}">
+      </list-panel>
+    </navigator>
+
+  </view>
+
+
+</view>

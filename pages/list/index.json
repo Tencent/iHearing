@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "list-panel": "/components/list-panel/index"
+  }
+}

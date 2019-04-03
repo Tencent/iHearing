@@ -1,0 +1,83 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.0",
+	"appid": "wx2fc676762de1d7f8",
+	"projectname": "%E6%99%BA%E8%81%86%E5%8F%A3%E8%AF%AD%E8%AF%84%E6%B5%8B",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "单元单词列表",
+					"pathName": "pages/list/index",
+					"query": "grade=3&unit=1"
+				},
+				{
+					"id": 1,
+					"name": "单词测评",
+					"pathName": "pages/assessment/index",
+					"query": "mode=word&index=0"
+				},
+				{
+					"id": -1,
+					"name": "句子测评",
+					"pathName": "pages/assessment/index",
+					"query": "mode=sentence&index=10"
+				},
+				{
+					"id": -1,
+					"name": "列表页(句子)",
+					"pathName": "pages/list/index",
+					"query": "mode=sentence"
+				},
+				{
+					"id": 4,
+					"name": "诗词背诵",
+					"pathName": "pages/poetry/index",
+					"query": "mode=peotry&index=0"
+				},
+				{
+					"id": -1,
+					"name": "小学生诗词背诵",
+					"pathName": "pages/student/index",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "年级选择",
+					"pathName": "pages/grade/index",
+					"query": "grade=3"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,15 @@
+<view class="panel"  >
+  <view class="content">{{content}}</view>
+
+  <view class="result">
+
+    <view class="score">
+      <slot name="prefix" wx:if="{{score != 0}}"></slot>
+      <text class=" {{scoreClass}}" wx:if="{{score != 0}}">{{score}}</text>
+      <text class="" wx:else>未测评</text>
+    </view>
+
+    <view class="cell-next "></view>
+  </view>
+
+</view>
